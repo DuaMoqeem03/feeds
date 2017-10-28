@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import{AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {SMS} from "@ionic-native/sms";
 
  export const config = {
    apiKey: "AIzaSyBE89En2alR3vIbPxcRjX5hqUFZkTN7zEM",
@@ -47,6 +48,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
   ],
   providers: [
     StatusBar,
+    SMS,
     SplashScreen,
 
     {provide: ErrorHandler, useClass: IonicErrorHandler},
