@@ -16,13 +16,13 @@
 <ion-content padding>
 <ion-list>
 <ion-item>
-<ion-label floating>Title</ion-label>
+<ion-label floating>Phone Number</ion-label>
 <ion-input type="text" [(ngModel)]="post.phoneNumber"></ion-input>
 </ion-item>
 <ion-item>
-<ion-label floating>Body</ion-label>
+<ion-label floating>Message</ion-label>
 <ion-input type="text" [(ngModel)]="post.message"></ion-input>
 </ion-item>
-<button ion-button full (click)="submit(); sendTextMessage()">Submit</button>
+<button ion-button full (click)="submit(); sendTextMessage();">Submit</button>
 </ion-list>
 </ion-content>

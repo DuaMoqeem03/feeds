@@ -11,11 +11,8 @@ import {SMS} from "@ionic-native/sms";
  * Ionic pages and navigation.
  */
  class Post{
-// title:string
- //body:string
- id:string
- constructor()
- {}
+phoneNumber:string
+ message:string
  }
 
 @Component({
@@ -23,7 +20,7 @@ import {SMS} from "@ionic-native/sms";
   templateUrl: 'post.html',
 })
 export class PostPage {
-  text = {
+  text :Post= {
     "phoneNumber": "03400376028",
     "message": ""
   };
@@ -32,8 +29,8 @@ export class PostPage {
   constructor(public navCtrl: NavController,public af: AngularFireDatabase , private toastCtrl: ToastController,public sms: SMS) {
   }
 submit(){
-  this.af.list('/posts').push(this.post);
-this.post=new Post();
+  this.af.list('/posts').push(this.text);
+this.text=new Post();
 	this.navCtrl.parent.select(0)
 }
   sendTextMessage() {
